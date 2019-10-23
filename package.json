@@ -1,0 +1,23 @@
+{
+  "name": "ds-implementations",
+  "version": "1.0.0",
+  "description": "implementation of various data structures",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucySuddenly/ds-implementations.git"
+  },
+  "author": "Lucy Suddenly",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/LucySuddenly/ds-implementations/issues"
+  },
+  "homepage": "https://github.com/LucySuddenly/ds-implementations#readme"
+}
