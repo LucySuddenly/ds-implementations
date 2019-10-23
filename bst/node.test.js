@@ -10,3 +10,6 @@ test('new Node should be initialized with data', () => {
     expect(node.data).toBe("test")
 })
 
+test('new Node should throw error if initialized without data', () => {
+    expect(() => {new Node}).toThrow()
+})
