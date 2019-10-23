@@ -13,3 +13,9 @@ test('new Node should be initialized with data', () => {
 test('new Node should throw error if initialized without data', () => {
     expect(() => {new Node}).toThrow()
 })
+
+test('a new Node should have null left and right pointers', () => {
+    const node = new Node("test")
+    expect(node.left).toBe(null)
+    expect(node.right).toBe(null)
+})
