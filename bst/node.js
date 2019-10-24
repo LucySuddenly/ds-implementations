@@ -1,7 +1,7 @@
 class Node{
     constructor(data){
       if (data === undefined){
-        throw "input cannot be undefined"
+        throw "a new Node requires an argument, data cannot be undefined"
       }
       this.data = data
       this.left = null
