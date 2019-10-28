@@ -21,8 +21,11 @@ test('a new Node should have null left and right pointers', () => {
 })
 
 test('a node should allow setting of right and left pointers to other nodes', () => {
+    const node0 = new Node(0)
     const node1 = new Node(1)
     const node2 = new Node(2)
     node1.right = node2 
+    node1.left = node0
     expect(node1.right).toBe(node2)
+    expect(node1.left).toBe(node0)
 })
