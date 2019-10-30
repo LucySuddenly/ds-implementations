@@ -27,3 +27,17 @@ describe("if a BST's root data !null,", () => {
     })
 })
 
+test(".minNode returns the data of the leftmost node", () => {
+        let bst = new BST()
+        bst.insert(10)
+        bst.insert(9)
+        bst.insert(8)
+        bst.insert(7)
+        bst.insert(6)
+        bst.insert(5)
+        bst.insert(4)
+        bst.insert(3)
+        let root = bst.getRootNode()
+        let min = bst.minNode(root)
+        expect(min).toBe(3)
+})

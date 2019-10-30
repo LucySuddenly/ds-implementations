@@ -29,9 +29,9 @@ class BST{
     }
     minNode(node) {
       if (node.left === null) {
-        console.log(node.data)
+        return node.data
       } else {
-        this.minNode(node.left)
+        return this.minNode(node.left)
       }
     }
     inOrder(node) {
