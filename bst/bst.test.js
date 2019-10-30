@@ -28,16 +28,39 @@ describe("if a BST's root data !null,", () => {
 })
 
 test(".minNode returns the leftmost node", () => {
-        let bst = new BST()
-        bst.insert(10)
-        bst.insert(9)
-        bst.insert(8)
-        bst.insert(7)
-        bst.insert(6)
-        bst.insert(5)
-        bst.insert(4)
-        bst.insert(3)
-        let root = bst.getRootNode()
-        let min = bst.minNode(root)
-        expect(min.data).toBe(3)
+    let bst = new BST()
+    bst.insert(10)
+    bst.insert(9)
+    bst.insert(8)
+    bst.insert(7)
+    bst.insert(6)
+    bst.insert(5)
+    bst.insert(4)
+    bst.insert(3)
+    let root = bst.getRootNode()
+    let min = bst.minNode(root)
+    expect(min.data).toBe(3)
+})
+
+test(".inOrder returns an array of sorted ascending values", () => {
+    let bst = new BST()
+    bst.insert(10)
+    bst.insert(3)
+    bst.insert(7)
+    bst.insert(2)
+    bst.insert(11)
+    bst.insert(14)
+    bst.insert(8)
+    bst.insert(9)
+    bst.insert(1)
+    let root = bst.getRootNode()
+    let result = true
+    let inOrder = bst.inOrder(root)
+    let test = [1,2,3,7,8,9,10,11,14]
+    for (let i = 0; i < inOrder.length; i++) {
+        if (inOrder[i] !== test[i]) {
+            result = false
+        }
+    }
+    expect(result).toBe(true)
 })

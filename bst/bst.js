@@ -34,12 +34,28 @@ class BST{
         return this.minNode(node.left)
       }
     }
-    inOrder(node) {
-      if (node !== null){
-        this.inOrder(node.left)
-        console.log(node.data)
-        this.inOrder(node.right)
+    inOrder(root) {
+      // if (node !== null){
+      //   this.inOrder(node.left)
+      //   console.log(node.data)
+      //   this.inOrder(node.right)
+      // }
+      let current = root 
+      let stack = []
+      let output = []
+      while (true) {
+        if (current !== null){
+          stack.push(current)
+          current = current.left
+        } else if (stack.length > 0){
+          current = stack.pop()
+          output.push(current.data)
+          current = current.right
+        } else {
+          break
+        }
       }
+      return output
     }
     getRootNode() { 
       return this.root; 
