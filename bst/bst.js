@@ -29,7 +29,7 @@ class BST{
     }
     minNode(node) {
       if (node.left === null) {
-        return node.data
+        return node
       } else {
         return this.minNode(node.left)
       }
