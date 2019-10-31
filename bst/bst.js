@@ -68,7 +68,7 @@ class BST{
       else if (node.data < data)
         return this.search(node.right, data)
       else
-        console.log(node)
+      return node
     }
 }
 

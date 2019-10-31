@@ -64,3 +64,18 @@ test(".inOrder returns an array of sorted ascending values", () => {
     }
     expect(result).toBe(true)
 })
+
+test(".search returns the node whose value is given as an argument", () => {
+    let bst = new BST()
+    bst.insert(10)
+    bst.insert(3)
+    bst.insert(7)
+    bst.insert(2)
+    bst.insert(11)
+    bst.insert(14)
+    bst.insert(8)
+    bst.insert(9)
+    bst.insert(1)
+    let root = bst.getRootNode()
+    expect(bst.search(root, 14).data).toBe(14)
+})
