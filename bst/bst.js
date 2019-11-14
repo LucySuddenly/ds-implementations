@@ -62,13 +62,13 @@ class BST{
     } 
     search(node, data) {
       if (node === null)
-        return null
+        return -1
       else if (node.data > data)
         return this.search(node.left, data)
       else if (node.data < data)
         return this.search(node.right, data)
-      else
-      return node
+      else 
+        return node
     }
 }
 
