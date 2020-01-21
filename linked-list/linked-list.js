@@ -9,15 +9,14 @@ class LinkedList{
         let newNode = new Node(data)
         if (this.root === null){
             this.root = newNode
-            this.size++
         } else {
             let currentNode = this.root
             while(currentNode.next){
                 currentNode = currentNode.next
             }
             currentNode.next = newNode
-            this.size++
         }
+        this.size++
     }
 }
 
