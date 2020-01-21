@@ -2,13 +2,20 @@ const LinkedList = require('./linked-list.js')
 
 let ll = new LinkedList()
 
-test("new LinkedList should return a LinkedList object",() => {
-    expect(ll.constructor).toBe(LinkedList)
+
+describe("new LinkedList should", () => {
+    test("return a LinkedList object",() => {
+        expect(ll.constructor).toBe(LinkedList)
+    })
+
+    test("be initialized with a null root node pointer", () => {
+        expect(ll.root).toBe(null)
+    })
+    test("be initialized with a size counter equal to zero", () => {
+        expect(ll.size).toBe(0)
+    })
 })
 
-test("new LinkedList should be initialized with a null a root node", () => {
-    expect(ll.root).toBe(null)
-})
 
 describe(".insert()", () => {
     test("if LinkedList root is null, sets the root node", () => {
@@ -22,5 +29,8 @@ describe(".insert()", () => {
         ll.insert(13)
         ll.insert(14)
         expect(ll.root.next.next.next.next.next.data).toBe(14)
+    })
+    test("should increase the size counter by one for every new node", () => {
+        expect(ll.size).toBe(6)
     })
 })
