@@ -18,6 +18,30 @@ class LinkedList{
         }
         this.size++
     }
+    insertAt(data, index){
+        if (index.constructor !== Number || 
+            index > this.size - 1 || 
+            index < 0 ){
+            throw "index argument must be a positive integer less than the size of the linked list minus 1"
+        }
+        let newNode = new Node(data)
+        if (index === 0) {
+            newNode.next = this.root
+            this.root = newNode
+        } else {
+            let prev 
+            let curr = this.root 
+            let i = 0
+            while (i < index){
+                prev = curr
+                curr = curr.next
+                i++
+            }
+            newNode.next = curr 
+            prev.next = newNode
+        }
+        this.size++
+    }
 }
 
 module.exports = LinkedList
