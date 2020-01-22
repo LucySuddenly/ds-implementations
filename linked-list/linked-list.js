@@ -17,13 +17,15 @@ class LinkedList{
     insertAt(data, index){
         if (index.constructor !== Number || 
             index > this.size - 1 || 
-            index < 0 ){
-            throw "index argument must be a positive integer less than the size of the linked list minus 1"
+            index < -1 ){
+            throw "index argument must be a positive integer less than the size of the linked list minus 1 or -1 for last node"
         }
         let newNode = new Node(data)
         if (index === 0) {
             newNode.next = this.root
             this.root = newNode
+        } else if (index === -1) {
+            this.lastNode().next = newNode
         } else {
             let prev 
             let curr = this.root 
