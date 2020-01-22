@@ -47,3 +47,13 @@ describe(".insertAt(data, index)", () => {
         expect(ll.lastNode().data).toBe(40)
     })
 })
+
+describe(".removeAt(index)", () => {
+    test("should throw if the index is less than -1, greater than the size of the ll, or NaN", () => {
+        expect(() => ll.removeAt(-2)).toThrow()
+    })
+    test("should remove a node at the given index", () => {
+        expect(ll.removeAt(0)).toBe(20)
+        expect(ll.size).toBe(8)
+    })
+})

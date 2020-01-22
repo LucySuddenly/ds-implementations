@@ -22,7 +22,6 @@ class LinkedList{
         }
         let newNode = new Node(data)
         if (index === 0) {
-            newNode.next = this.root
             this.root = newNode
         } else if (index === -1) {
             this.lastNode().next = newNode
@@ -46,6 +45,28 @@ class LinkedList{
             currentNode = currentNode.next
         }
         return currentNode
+    }
+    removeAt(index){
+        if (index.constructor !== Number || 
+            index > this.size - 1 || 
+            index < -1 ){
+            throw "index argument must be a positive integer less than the size of the linked list minus 1 or -1 for last node"
+        } 
+        if (index === 0){
+            this.root = this.root.next
+        } else {
+            let prev 
+            let curr = this.root 
+            let i = 0
+            while (i < index){
+                prev = curr
+                curr = curr.next
+                i++
+            }
+        }
+        prev.next = curr.next
+        this.size--
+        return curr.data
     }
 }
 
