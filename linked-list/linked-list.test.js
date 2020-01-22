@@ -25,7 +25,7 @@ describe(".insert(data)", () => {
         ll.insert(12)
         ll.insert(13)
         ll.insert(14)
-        expect(ll.root.next.next.next.next.next.data).toBe(14)
+        expect(ll.lastNode().data).toBe(14)
     })
     test("should increase the size counter by one for every new node", () => {
         expect(ll.size).toBe(6)

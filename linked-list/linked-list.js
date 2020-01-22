@@ -10,11 +10,7 @@ class LinkedList{
         if (this.root === null){
             this.root = newNode
         } else {
-            let currentNode = this.root
-            while(currentNode.next){
-                currentNode = currentNode.next
-            }
-            currentNode.next = newNode
+            this.lastNode().next = newNode
         }
         this.size++
     }
@@ -41,6 +37,13 @@ class LinkedList{
             prev.next = newNode
         }
         this.size++
+    }
+    lastNode(){
+        let currentNode = this.root
+        while(currentNode.next){
+            currentNode = currentNode.next
+        }
+        return currentNode
     }
 }
 
