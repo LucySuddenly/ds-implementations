@@ -54,6 +54,6 @@ describe(".removeAt(index)", () => {
     })
     test("should remove a node at the given index", () => {
         expect(ll.removeAt(0)).toBe(20)
-        expect(ll.size).toBe(8)
+        expect(ll.size).toBe(9)
     })
 })
