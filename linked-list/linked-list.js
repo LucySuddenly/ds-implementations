@@ -48,6 +48,7 @@ class LinkedList{
         if (index === 0){
             let ret = this.root
             this.root = this.root.next
+            this.size--
             return ret.data
         } else {
             let [prev, curr] = this.nodesAtIndexAndPrev(index)
