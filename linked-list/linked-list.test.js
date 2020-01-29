@@ -62,4 +62,7 @@ describe(".search(data)", () => {
     test("should return the node associated with the data", () => {
         expect(ll.search(20).data).toBe(20)
     })
+    test("should return -1 if the data is not found", () => {
+        expect(ll.search(1000)).toBe(-1)
+    })
 })
