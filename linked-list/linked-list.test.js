@@ -57,3 +57,9 @@ describe(".removeAt(index)", () => {
         expect(ll.size).toBe(9)
     })
 })
+
+describe(".search(data)", () => {
+    test("should return the node associated with the data", () => {
+        expect(ll.search(20).data).toBe(20)
+    })
+})
