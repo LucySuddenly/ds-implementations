@@ -68,6 +68,16 @@ class LinkedList{
         }
         return [prev, curr]
     }
+    search(data){
+        let curr = this.root
+        while(curr.data !== data){
+            curr = curr.next
+            if(curr === null){
+                return -1
+            }
+        }
+        return curr
+    }
 }
 
 module.exports = LinkedList

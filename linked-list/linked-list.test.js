@@ -54,13 +54,13 @@ describe(".removeAt(index)", () => {
     })
     test("should remove a node at the given index", () => {
         expect(ll.removeAt(0)).toBe(20)
-        expect(ll.size).toBe(9)
+        expect(ll.size).toBe(8)
     })
 })
 
 describe(".search(data)", () => {
     test("should return the node associated with the data", () => {
-        expect(ll.search(20).data).toBe(20)
+        expect(ll.search(30).data).toBe(30)
     })
     test("should return -1 if the data is not found", () => {
         expect(ll.search(1000)).toBe(-1)
